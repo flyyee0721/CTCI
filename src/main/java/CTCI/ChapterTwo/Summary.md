@@ -11,7 +11,8 @@
 
 **Create a linked list**
 
-```public class Node {
+```java
+public class Node {
     private int val;
     private Node next;
     public Node(int val) {
