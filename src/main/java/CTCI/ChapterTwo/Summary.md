@@ -11,7 +11,7 @@
 
 **Create a linked list**
 
-public class Node {
+```public class Node {
     private int val;
     private Node next;
     public Node(int val) {
@@ -27,3 +27,4 @@ public class Node {
         runner.next = new Node(v);
     }
 }
+```
