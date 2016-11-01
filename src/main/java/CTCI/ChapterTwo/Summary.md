@@ -29,3 +29,4 @@ public class Node {
     }
 }
 ```
+**_Note in the above code, we use a linked list node to represent the entire list. A better way to do it is to wrap the head node itself in a linked list class._**
