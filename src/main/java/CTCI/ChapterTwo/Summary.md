@@ -29,4 +29,54 @@ public class Node {
     }
 }
 ```
-**_Note in the above code, we use a linked list node to represent the entire list. A better way to do it is to wrap the head node itself in a linked list class.**_
+**_Note in the above code, we use a linked list node to represent the entire list. A better way to do it is to wrap the head node itself in a linked list class._**
+
+```java
+public class LinkedList {
+    class Node {
+        int val;
+        Node next;
+        public Node(int val) {
+            this.val = val;
+            next = null;
+        }
+    }
+    private Node head = null;
+
+    public LinkedList(int a) {
+        head = new Node(a);
+    }
+
+    /**
+     *  Add a value to the tail.
+     */
+    public void addToTail(int a) {
+        if (null == head) {
+            head = new Node(a);
+        } else {
+            Node runner = head;
+            //Find the tail
+            while(runner.next != null) {
+                runner = runner.next;
+            }
+            runner.next = new Node(a);
+        }
+    }
+
+    /**
+     * Add a value to the head.
+     */
+     public void addToHead(int a) {
+        Node newHead = new Node(a);
+        newHead.next = head;
+        head = newHead;
+     }
+
+     /**
+      * Add a value to the list, by default add to head.
+      */
+     public void add(int a) {
+        addToHead(a);
+     }
+}
+```
