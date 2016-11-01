@@ -46,47 +46,45 @@ public class LinkedList {
     public LinkedList(int a) {
         head = new Node(a);
     }
+}
 ```
 
 ###Add node to a linked list.
 
 * Add node to a singly linked list is fairly straightforward.
   1. If we are adding it to the front, just create a new node and append it before the old head, and don`t forget to update the head to new head.
-```java
-    /**
-     *  Add a value to the tail.
-     */
-    public void addToTail(int a) {
-        if (null == head) {
-            head = new Node(a);
-        } else {
-            Node runner = head;
-            //Find the tail
-            while(runner.next != null) {
-                runner = runner.next;
-            }
-            runner.next = new Node(a);
-        }
-    }
-```
   2. If we are adding it to the tail, need to traverse through the list to find the tail element, and append the node to the tail.
 ```java
-    /**
-     * Add a value to the head.
-     */
-     public void addToHead(int a) {
-        Node newHead = new Node(a);
-        newHead.next = head;
-        head = newHead;
-     }
-
-     /**
-      * Add a value to the list, by default add to head.
-      */
-     public void add(int a) {
-        addToHead(a);
-     }
+/**
+ *  Add a value to the tail.
+ */
+public void addToTail(int a) {
+    if (null == head) {
+        head = new Node(a);
+    } else {
+        Node runner = head;
+        //Find the tail
+        while(runner.next != null) {
+            runner = runner.next;
+        }
+        runner.next = new Node(a);
+    }
 }
+/**
+ * Add a value to the head.
+ */
+ public void addToHead(int a) {
+    Node newHead = new Node(a);
+    newHead.next = head;
+    head = newHead;
+ }
+
+ /**
+  * Add a value to the list, by default add to head.
+  */
+ public void add(int a) {
+    addToHead(a);
+ }
 ```
 
 ###Delete a node from a singly linked list
