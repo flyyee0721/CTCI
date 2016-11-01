@@ -1,6 +1,6 @@
 ## <a name='toc'>Linked List</a>
 
-**What is a linked list**
+###What is a linked list
 
 * LinkedList is a data structure that reprensents **a sequence of nodes**. Each node in the single linked list points to its next node. A double linked list also have a pointer to point to its previous node.
 
@@ -9,7 +9,7 @@
 * For a linked list, you can add and remove a node from the head in constant time. Adding to and removing after tail is **not constant time**. However, if maintaining a tail node, adding after and removing from the tail of a linked list is also **constant** time.
 
 
-**Create a linked list**
+###Create a linked list
 
 ```java
 public class Node {
@@ -29,4 +29,4 @@ public class Node {
     }
 }
 ```
-_Note in the above code, we use a linked list node to represent the entire list. A better way to do it is to wrap the head node itself in a linked list class._
+**_Note in the above code, we use a linked list node to represent the entire list. A better way to do it is to wrap the head node itself in a linked list class.**_
