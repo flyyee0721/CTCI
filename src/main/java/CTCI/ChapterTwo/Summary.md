@@ -50,7 +50,7 @@ public class LinkedList {
 
 ###Add node to a linked list.
 * Add node to a singly linked list is fairly straightforward. If we are adding it to the front, just create a new node and append it before the old head, and don`t forget to update the head to new head.
-    ..1 test
+  1. test
 ```java
     /**
      *  Add a value to the tail.
