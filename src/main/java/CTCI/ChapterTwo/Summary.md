@@ -9,23 +9,45 @@
 * For a linked list, you can add and remove a node from the head in constant time. Adding to and removing after tail is **not constant time**. However, if maintaining a tail node, adding after and removing from the tail of a linked list is also **constant** time.
 
 
-###Create a linked list and add a value into it
+###Create a linked list
 
 ```java
-public class Node {
+public class SinglyNode {
     private int val;
-    private Node next;
-    public Node(int val) {
+    private SinglyNode next;
+    public SinglyNode(int val) {
         this.val = vale;
         next = null;
     }
-    public void appendToTail(int v) {
+    public SinglyNode appendToTail(int v) {
         //Starting from the node itself.
-        Node runner = this;
+        SinglyNode runner = this;
         while (runner.next != null) {
             runner = runner.next;
         }
-        runner.next = new Node(v);
+        runner.next = new SinglyNode(v);
+        //For chaining purpose
+        return this;
+    }
+
+    public Node addToHead(int v) {
+        //This gets a little bit tricky because we are adding a new node to **this** node.
+        SinglyNode newHead = new SinglyNode(v);
+        newHead.next = this;
+        return newHead;
+        //If anyone use this object, it is not the head anymore.
+    }
+}
+```
+
+public class DoublyNode {
+    private int val;
+    private Node prev;
+    private Node next;
+    public Node(int val) {
+        this.val = val;
+        prev = null;
+        next = null;
     }
 }
 ```
@@ -49,7 +71,7 @@ public class LinkedList {
 }
 ```
 
-###Add node to a linked list.
+###Add a value to a linked list
 
 * Add node to a singly linked list is fairly straightforward.
   1. If we are adding it to the front, just create a new node and append it before the old head, and don`t forget to update the head to new head.
@@ -87,18 +109,21 @@ public void addToTail(int a) {
  }
 ```
 
+* Add node to a doubly linked list requires one to manipulate both the head and tail nodes.
+  1. If we are adding it to the front, need to check if
+
 ###Delete a node from a singly linked list
 
 * To delete a node from a linked list, it is necessary to traverse the entire linked list to find the previous node of the target node, which takes O(n) time.
 
 * If the linked list is a singly linked list, we set the next pointer of previous node to the next node of the target node.
 ```java
-    public Node remove(Node node, int a) {
-        if (null == node) { return node; }
-        if (node.val == a) { return node.next; }
-        node.next = remove(node.next, a);
-        return node;
-    }
+public Node remove(Node node, int a) {
+    if (null == node) { return node; }
+    if (node.val == a) { return node.next; }
+    node.next = remove(node.next, a);
+    return node;
+}
 ```
 
 * Remove the target node from the linked list is of constant time, compared to array, which requires data shift to previous location.
