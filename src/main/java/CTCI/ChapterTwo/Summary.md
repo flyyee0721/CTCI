@@ -1,2 +1,1 @@
-# LinkedList
-
+## <a name='toc'>LinkedList</a>
