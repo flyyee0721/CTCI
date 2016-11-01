@@ -9,7 +9,7 @@
 * For a linked list, you can add and remove a node from the head in constant time. Adding to and removing after tail is **not constant time**. However, if maintaining a tail node, adding after and removing from the tail of a linked list is also **constant** time.
 
 
-###Create a linked list
+###Create a linked list and add a value into it
 
 ```java
 public class Node {
@@ -80,3 +80,23 @@ public class LinkedList {
      }
 }
 ```
+###Delete a node from a singly linked list
+
+* To delete a node from a linked list, it is necessary to traverse the entire linked list to find the previous node of the target node, which takes O(n) time.
+
+* If the linked list is a singly linked list, we set the next pointer of previous node to the next node of the target node.
+```java
+    public Node remove(Node node, int a) {
+        if (null == node) { return node; }
+        if (node.val == a) { return node.next; }
+        node.next = remove(node.next, a);
+        return node;
+    }
+```
+
+* Remove the target node from the linked list is of constant time, compared to array, which requires data shift to previous location.
+
+*
+
+
+
