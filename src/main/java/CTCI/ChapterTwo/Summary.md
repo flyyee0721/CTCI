@@ -4,4 +4,7 @@
 
 * LinkedList is a data structure that reprensents a sequence of nodes. Each node in the single linkedlist points to its next node. A double linkedlist also have a pointer to point to its previous node.
 
+* For linkedlist,
+** to add a node to its
+
 **Create a linkedlist**
