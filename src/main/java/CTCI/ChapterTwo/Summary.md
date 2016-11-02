@@ -30,12 +30,28 @@ public class SinglyNode {
         return this;
     }
 
-    public Node addToHead(int v) {
+    public SinglyNode addToHead(int v) {
         //This gets a little bit tricky because we are adding a new node to **this** node.
         SinglyNode newHead = new SinglyNode(v);
         newHead.next = this;
         return newHead;
         //If anyone use this object, it is not the head anymore.
+    }
+    
+    public SinglyNode delete(int v) {
+        //delete gets a little bit tricky because the node itself may be the target. 
+        if (this.val == v) {
+            return this.next;
+        }
+        SinglyNode runner = this;
+        while(runner.next != null) {
+            if (runner.next.val == v) {
+                runner.next = runner.next.next; 
+                return this;
+            }
+        }
+        //No matching is found.
+        return this;
     }
 }
 
@@ -61,7 +77,36 @@ public class DoublyNode {
     }
     
     public DoublyNode addToHead(int v) {
-         
+        DoublyNode newHead = new DoublyNode(v);
+        newHead.next = this;
+        this.prev = newHead;
+        return newHead;
+    }
+    
+    public DoublyNode delete(int v) {
+        if (val == v) {
+            if (next != null) {
+                //set prev pointer pointing to null
+                next.prev = null; 
+            }
+            return next;
+        }
+        DoublyNode runner = this;
+        while(runner.next != null) {
+            //Found
+            if (runner.next.val == v) {
+                DoublyNode toBeRemoved = runner.next;
+                runner.next = runner.next.next;
+                if (runner.next != null) {
+                    runner.next.prev = runner; 
+                }
+                toBeRemoved.next = null;
+                toBeRemoved.prev = null;
+                return this;
+            }
+        }
+        //No match found
+        return this;
     }
 }
 ```
