@@ -19,7 +19,7 @@ public class SinglyNode {
         this.val = vale;
         next = null;
     }
-    public SinglyNode appendToTail(int v) {
+    public SinglyNode addToTail(int v) {
         //Starting from the node itself.
         SinglyNode runner = this;
         while (runner.next != null) {
@@ -38,7 +38,6 @@ public class SinglyNode {
         //If anyone use this object, it is not the head anymore.
     }
 }
-```
 
 public class DoublyNode {
     private int val;
@@ -48,6 +47,21 @@ public class DoublyNode {
         this.val = val;
         prev = null;
         next = null;
+    }
+    
+    public DoublyNode addToTail(int v) {
+        Node runner = this;
+        while(runner.next != null) {
+            runner = runner.next;
+        }
+        runner.next = new DoublyNode(v);
+        //Have prev pointer pointing to runner.
+        runner.next.prev = runner;
+        return this;
+    }
+    
+    public DoublyNode addToHead(int v) {
+         
     }
 }
 ```
