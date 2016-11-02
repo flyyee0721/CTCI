@@ -51,6 +51,7 @@ public class SinglyNode {
                 runner.next = runner.next.next; 
                 return this;
             }
+            runner = runner.next;
         }
         //No matching is found.
         return this;
@@ -106,6 +107,7 @@ public class DoublyNode {
                 toBeRemoved.prev = null;
                 return this;
             }
+            runner = runner.next;
         }
         //No match found
         return this;
@@ -183,6 +185,10 @@ private SinglyNode addToTail(SinglyNode head, int a) {
 * Add node to a doubly linked list requires the change of both prev and next pointers.both the next and prev pointers changeone to manipulate both the head and tail nodes.
   
 ```java
+
+/**
+ * Public method called by users.
+ */
 public void add(int a) {
     addToHead(a); 
 }
@@ -221,23 +227,51 @@ private void addToTail(int a) {
 }
 ```
 
-###Delete a node from a singly linked list
+###Delete a node from a linked list
 
-* To delete a node from a linked list, it is necessary to traverse the entire linked list to find the previous node of the target node, which takes O(n) time.
+* To delete a node from a singly linked list, it is necessary to traverse the entire linked list to find the node whose next node is the target valuep. This takes O(n) time.
 
-* If the linked list is a singly linked list, we set the next pointer of previous node to the next node of the target node.
 ```java
-public Node remove(Node node, int a) {
+/**
+ * Public method called by user. 
+ */
+public void remove(int a) {
+   head = removeRecursion(head, a); 
+}
+
+/**
+ * Recursive way to remove a value from a singly linked list.
+ */
+private SinglyNode removeRecursion(SinglyNode node, int a) {
     if (null == node) { return node; }
     if (node.val == a) { return node.next; }
     node.next = remove(node.next, a);
     return node;
 }
+
+/**
+ * Iterative way to remove a value from a singly linked list.
+ */
+ 
+ private SinglyNode removeIteration(SinglyNode node, int a) {
+    if (null == node) { return node; } 
+    if (node.val == a) { return node.next; }
+    SinglyNode runner = node;
+    while (runner.next != null) {
+        if (runner.next.val == a) {
+            runner.next = runner.next.next; 
+            return node;
+        } 
+        runner = runner.next; 
+    }
+    //No match is found
+    return node;
+ }
+ 
+ 
+
+
 ```
 
 * Remove the target node from the linked list is of constant time, compared to array, which requires data shift to previous location.
-
-*
-
-
 
