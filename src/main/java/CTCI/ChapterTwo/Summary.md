@@ -229,7 +229,8 @@ private void addToTail(int a) {
 
 ###Delete a node from a linked list
 
-* To delete a node from a singly linked list, it is necessary to traverse the entire linked list to find the node whose next node is the target valuep. This takes O(n) time.
+* To delete a node from a singly linked list, it is necessary to traverse the entire linked list to find the node whose next node is the target value. This takes O(n) time.
+* Remove the target value takes O(1) time, compared to array, which requires data shift to previous location.
 
 ```java
 /**
@@ -267,11 +268,32 @@ private SinglyNode removeRecursion(SinglyNode node, int a) {
     //No match is found
     return node;
  }
- 
- 
+```
 
+* To delete a node from a doubly linked list, both the head and tail nodes need to be taken care of.
+```java
 
 ```
 
-* Remove the target node from the linked list is of constant time, compared to array, which requires data shift to previous location.
+###The "Runner" Technique, A.K.A two pointers method.
+* Two pointer method is used in many linked list problems. The runner technique means that you iterate through the list using two pointers simultaneously.
+* The two pointers can move in different ways depending on the problem to solve. One pointer can start ahead of the other one(slow) at a certain distance(**Find the kth node from the end of linked list**), or two pointers can move at different paces(**Find the middle node in one pass**).
+```java
+public void findMiddle(SinglyNode node) {
+    
+}
+
+public void findKthNodeFromEnd(SinglyNode node) {
+
+}
+
+public void detectLoop(SinglyNode node) {
+    
+
+}
+```
+
+###Linked list problem can always be solved using recursion algorithm.
+
+*
 
