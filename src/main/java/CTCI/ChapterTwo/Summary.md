@@ -8,6 +8,8 @@
 
 * For a linked list, you can add and remove a node from the head in constant time. Adding to and removing after tail is **not constant time**. However, if maintaining a tail node, adding after and removing from the tail of a linked list is also **constant** time.
 
+* In the examples below, I assume that a doubly linked list contains two nodes head and tail.
+
 
 ###Create a linked list
 
@@ -178,8 +180,7 @@ private SinglyNode addToTail(SinglyNode head, int a) {
  }
 ```
 
-* Add node to a doubly linked list requires one to manipulate both the head and tail nodes.
-  1. If we are adding it to the front, need to check if
+* Add node to a doubly linked list requires the change of both prev and next pointers.both the next and prev pointers changeone to manipulate both the head and tail nodes.
   
 ```java
 public void add(int a) {
@@ -218,7 +219,6 @@ private void addToTail(int a) {
         //No need to update head.
     }
 }
-  
 ```
 
 ###Delete a node from a singly linked list
