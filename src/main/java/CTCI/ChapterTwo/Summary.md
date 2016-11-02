@@ -182,7 +182,7 @@ private SinglyNode addToTail(SinglyNode head, int a) {
  }
 ```
 
-* Add node to a doubly linked list requires the change of both prev and next pointers.both the next and prev pointers changeone to manipulate both the head and tail nodes.
+* Add node to a doubly linked list requires the change of both prev and next pointers.
   
 ```java
 
