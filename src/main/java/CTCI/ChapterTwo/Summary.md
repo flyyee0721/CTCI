@@ -137,11 +137,18 @@ public class LinkedList {
   2. If we are adding it to the tail, need to traverse through the list to find the tail element, and append the node to the tail.
 ```java
 /**
- *  Add a value to the tail.
+ * Public method called by user to add to tail
  */
-public void addToTail(int a) {
+public void add(int a) {
+    head = addToTail(head, a);
+}
+
+/**
+ *  Add a value to the tail of a linked list.
+ */
+private SinglyNode addToTail(SinglyNode head, int a) {
     if (null == head) {
-        head = new Node(a);
+        return new Node(a);
     } else {
         Node runner = head;
         //Find the tail
@@ -149,27 +156,70 @@ public void addToTail(int a) {
             runner = runner.next;
         }
         runner.next = new Node(a);
+        return head;
     }
 }
+
+/**
+ * Public method called by user to add to head
+ */
+ public void add(int a) {
+    head = addToHead(head, a);
+ }
+ 
 /**
  * Add a value to the head.
+ * Generic way to operate on nodes.
  */
- public void addToHead(int a) {
-    Node newHead = new Node(a);
+ private SinglyNode addToHead(SinglyNode head, int a) {
+    SinglyNode newHead = new Node(a);
     newHead.next = head;
-    head = newHead;
- }
-
- /**
-  * Add a value to the list, by default add to head.
-  */
- public void add(int a) {
-    addToHead(a);
+    return newHead;
  }
 ```
 
 * Add node to a doubly linked list requires one to manipulate both the head and tail nodes.
   1. If we are adding it to the front, need to check if
+  
+```java
+public void add(int a) {
+    addToHead(a); 
+}
+
+/**
+ *  Add a value to the head of a doubly linked list. 
+ */
+private void addToHead(int a) {
+    if (null == head) {
+        head = new DoublyNode(a);
+        tail = head;
+    } else {
+        DoublyNode newHead = new DoublyNode(a);
+        newHead.next = head;
+        head.prev = newHead;
+        //Update head
+        head = newHead;
+        //No need to update tail.
+    }
+}
+
+/**
+ *  Add a value to the tail of a doubly linked list. 
+ */
+private void addToTail(int a) {
+    if (null == tail) {
+        tail = new DoublyNode(a);
+        head = tail;
+    } else {
+        tail.next = new DoublyNode(a);
+        tail.next.prev = tail;
+        //Update tail.
+        tail = tail.next;
+        //No need to update head.
+    }
+}
+  
+```
 
 ###Delete a node from a singly linked list
 
