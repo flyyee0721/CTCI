@@ -37,4 +37,13 @@ public class SinglyNode {
         sb.append(runner.val);
         return sb.toString();
     }
+
+    public static int GetLength(SinglyNode node) {
+        int i = 0;
+        while (node != null) {
+            i++;
+            node = node.next;
+        }
+        return i;
+    }
 }
