@@ -279,21 +279,39 @@ private SinglyNode removeRecursion(SinglyNode node, int a) {
 * Two pointer method is used in many linked list problems. The runner technique means that you iterate through the list using two pointers simultaneously.
 * The two pointers can move in different ways depending on the problem to solve. One pointer can start ahead of the other one(slow) at a certain distance(**Find the kth node from the end of linked list**), or two pointers can move at different paces(**Find the middle node in one pass**).
 ```java
-public void findMiddle(SinglyNode node) {
-    
+public SinglyNode findMiddle(SinglyNode node) {
+    SinglyNode slow = node;
+    SinglyNode fast = node;
+    while(fast != null && fast.next != null) {
+        slow = slow.next;
+        fast = fast.next.next;
+    }
+    return slow;
+    //case 1: even number of nodes, 1->2->3->4->5->6, slow will point at 4 
+    //case 2: odd number of nodes, 1->2->3->4->5,s slow will point at 3.
+    //case 3: even number of nodes, 1->2->3->4->5->6, if we want slow to point to 3, have fast point start at node.next
 }
+```
 
-public void findKthNodeFromEnd(SinglyNode node) {
-
+```java
+public SinglyNode findKthNodeFromEnd(SinglyNode node, int i) {
+    while( 
 }
+```
 
-public void detectLoop(SinglyNode node) {
-    
-
+```java
+public boolean detectLoop(SinglyNode node) {
+    SinglyNode slow = node;
+    SinglyNode fast = node;
+    while(fast != null && fast.next != null) {
+        fast = fast.next.next;
+        slow = slow.next;
+        if (fast == slow) {
+            return true; 
+        }
+    }
+    return false;
 }
 ```
 
 ###Linked list problem can always be solved using recursion algorithm.
-
-*
-
