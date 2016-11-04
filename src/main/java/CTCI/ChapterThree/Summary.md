@@ -11,7 +11,8 @@
   4. isEmpty(), check if the stack is empty or not. **O(1) time**.
   5. size(), return the size of a stack. **O(1) time**.
 * How to implement a stack?
-  1. What underlying data structure to use? A linked list model will work. A linked list model will work. A linked list model will work. A linked list model will work.
+  1. What underlying data structure to use? A linked list model will work. 
+  2. **As long as a data structure supports adding to one side and removing from the same side in O(1) time, we can use it to implement a stack**.
 ```java
     public class Stack<T> {
         static class StackNode {
