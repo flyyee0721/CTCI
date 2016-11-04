@@ -38,12 +38,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Summary.md" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Summary.md" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/CTCI/ChapterTwo/Summary.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
             <state split_layout="FIRST">
-              <first_editor relative-caret-position="2175">
-                <caret line="145" column="19" selection-start-line="145" selection-start-column="19" selection-end-line="145" selection-end-column="19" />
+              <first_editor relative-caret-position="330">
+                <caret line="294" column="0" selection-start-line="294" selection-start-column="0" selection-end-line="294" selection-end-column="0" />
                 <folding />
               </first_editor>
               <second_editor />
@@ -82,7 +82,7 @@
       <file leaf-file-name="IsPalindrome.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CTCI/ChapterTwo/IsPalindrome.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
+            <state relative-caret-position="-135">
               <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
               <folding />
             </state>
@@ -119,10 +119,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SumList.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SumList.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/CTCI/ChapterTwo/SumList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
+            <state relative-caret-position="330">
               <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
               <folding />
             </state>
@@ -172,10 +172,10 @@
         <option value="$PROJECT_DIR$/src/main/java/CTCI/ChapterTwo/RemoveDuplicate.java" />
         <option value="$PROJECT_DIR$/src/main/java/CTCI/ChapterTwo/ReturnKthToLast.java" />
         <option value="$PROJECT_DIR$/src/main/java/CTCI/ChapterTwo/DeleteMiddleNode.java" />
-        <option value="$PROJECT_DIR$/src/main/java/CTCI/ChapterTwo/Summary.md" />
         <option value="$PROJECT_DIR$/src/main/java/CTCI/ChapterTwo/IsPalindrome.java" />
         <option value="$PROJECT_DIR$/src/main/java/CTCI/ChapterTwo/PartitionLinkedList.java" />
         <option value="$PROJECT_DIR$/src/main/java/CTCI/ChapterTwo/SumList.java" />
+        <option value="$PROJECT_DIR$/src/main/java/CTCI/ChapterTwo/Summary.md" />
       </list>
     </option>
   </component>
@@ -1152,26 +1152,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CTCI/ChapterTwo/Summary.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
-        <state split_layout="FIRST">
-          <first_editor relative-caret-position="2175">
-            <caret line="145" column="19" selection-start-line="145" selection-start-column="19" selection-end-line="145" selection-end-column="19" />
-            <folding />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="465">
-          <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="MarkdownFxPreviewEditor">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CTCI/ChapterTwo/SinglyNode.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="555">
@@ -1180,14 +1160,6 @@
             <element signature="e#246#247#0" expanded="false" />
             <element signature="e#277#278#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/CTCI/ChapterTwo/IsPalindrome.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1201,10 +1173,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/CTCI/ChapterTwo/SumList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
+        <state relative-caret-position="330">
           <caret line="22" column="29" selection-start-line="22" selection-start-column="29" selection-end-line="22" selection-end-column="29" />
           <folding />
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CTCI/ChapterTwo/IsPalindrome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-135">
+          <caret line="24" column="37" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/CTCI/ChapterTwo/Summary.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="FIRST">
+          <first_editor relative-caret-position="330">
+            <caret line="294" column="0" selection-start-line="294" selection-start-column="0" selection-end-line="294" selection-end-column="0" />
+            <folding />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="33" column="31" selection-start-line="33" selection-start-column="31" selection-end-line="33" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="MarkdownFxPreviewEditor">
+        <state />
       </provider>
     </entry>
   </component>

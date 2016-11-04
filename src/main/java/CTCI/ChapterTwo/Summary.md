@@ -295,7 +295,20 @@ public SinglyNode findMiddle(SinglyNode node) {
 
 ```java
 public SinglyNode findKthNodeFromEnd(SinglyNode node, int i) {
-    while( 
+    SinglyNode first = node;
+    SinglyNode second = node;
+    for (int j = 0; j < i; j++) {
+        if (null == second.next) {
+            //The linked list is shorter than i;
+            return null;
+        }
+        second = second.next;
+    }
+    while(second.next != null) {
+        second = second.next;
+        first = first.next;
+    }
+    return first;
 }
 ```
 
