@@ -71,7 +71,7 @@
 
 ###Queue
 * What is a queue?
-  1. A quueue is a data structure that supporst First In First Out(FIFO) operation. Items are removed from a queue in the order they are added to the queue.
+  1. A queue is a data structure that supports First In First Out(FIFO) operation. Items are removed from a queue in the order they are added to the queue.
 * What operations does a queue support?
   1. add(E element), add an element to the tail of the queue. **O(1) time**.
   2. remove(), remove the first element from the head of the queue. **O(1) time**.
